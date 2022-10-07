@@ -463,7 +463,7 @@ static int http_read_response_next_vector(struct tstream_context *stream, void *
 }
 
 static void http_read_response_done(struct tevent_req *);
-struct tevent_req *http_read_response_send(TALLOC_CTX *mem_ctx, struct tevent_context *ev, struct http_conn *http_conn, size_t max_content_length) {
+__attribute__((unused)) struct tevent_req *http_read_response_send(TALLOC_CTX *mem_ctx, struct tevent_context *ev, struct http_conn *http_conn, size_t max_content_length) {
     struct tevent_req *req;
     struct tevent_req *subreq;
     struct http_read_response_state *state;
